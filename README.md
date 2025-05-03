@@ -13,28 +13,28 @@ Welcome to my personal portfolio website! Built with modern web technologies, th
   - `firebase` for backend integrations
   - `sweetalert2`, `react-intersection-observer`, `typewriter-effect`, and more
 
-## 🚀 Features
+##  Features
 
-- ⚡ Fast and responsive SPA
-- 🎨 Smooth animations and transitions
-- 💼 Dynamic project showcase
-- 📱 Mobile-first design
-- 🔒 Firebase integration
+-  Fast and responsive SPA
+- Smooth animations and transitions
+- Dynamic project showcase
+- Mobile-first design
+- Firebase integration
 
 
-### 🔃 Loading Page  
+### Loading Page  
 ![Loading Page](./public/Screenshots/loadingpage.png)
 
-### 🏠 Home Page  
+###  Home Page  
 ![Home Page](./public/Screenshots/homepage.png)
 
-### 📞 Contact Page  
-![Contact Page](./public/Screenshots/contactpage.png)
-
-### 💼 Portfolio Page  
+### Portfolio Page  
 ![Portfolio Page](./public/Screenshots/portfoliopage.png)
 
-## 📦 Getting Started
+###  Contact Page  
+![Contact Page](./public/Screenshots/contactpage.png)
+
+##  Getting Started
 
 To run the project locally:
 
