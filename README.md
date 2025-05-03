@@ -1,4 +1,4 @@
-# 🌐 Manishita Biswas – Personal Portfolio
+#  Manishita Biswas – My Personal Portfolio Page
 
 Welcome to my personal portfolio website! Built with modern web technologies, this site showcases my work, skills, and creative projects as a frontend developer focused on interactive design and immersive UI experiences.
 
