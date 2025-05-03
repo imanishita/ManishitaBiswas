@@ -22,19 +22,17 @@ Welcome to my personal portfolio website! Built with modern web technologies, th
 - 🔒 Firebase integration
 
 
-## 📸 Preview
+### 🔃 Loading Page  
+![Loading Page](./public/Screenshots/loadingpage.png)
 
-### 🔃 Loading Page
-![Loading Page](./public/loadingpage.png)
+### 🏠 Home Page  
+![Home Page](./public/Screenshots/homepage.png)
 
-### 🏠 Home Page
-![Home Page](./public/homepage.png)
+### 📞 Contact Page  
+![Contact Page](./public/Screenshots/contactpage.png)
 
-### 📞 Contact Page
-![Contact Page](./public/contactpage.png)
-
-### 💼 Portfolio Page
-![Portfolio Page](./public/portfoliopage.png)
+### 💼 Portfolio Page  
+![Portfolio Page](./public/Screenshots/portfoliopage.png)
 
 ## 📦 Getting Started
 
