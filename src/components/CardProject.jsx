@@ -2,10 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ExternalLink, ArrowRight } from 'lucide-react';
 
-const CardProject = ({ Img, Title, Description, Link: ProjectLink, id }) => {
+const CardProject = ({ Img, Title, Description, liveDemo, id }) => {
   // Handle kasus ketika ProjectLink kosong
   const handleLiveDemo = (e) => {
-    if (!ProjectLink) {
+    if (!liveDemo) {
       console.log("ProjectLink kosong");
       e.preventDefault();
       alert("Live demo link is not available");
@@ -46,9 +46,9 @@ const CardProject = ({ Img, Title, Description, Link: ProjectLink, id }) => {
             </p>
             
             <div className="pt-4 flex items-center justify-between">
-              {ProjectLink ? (
+              {liveDemo ? (
                 <a
-                href={ProjectLink || "#"}
+                href={liveDemo || "#"}
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={handleLiveDemo}
