@@ -173,7 +173,7 @@ const AboutPage = () => {
               I'm a passionate technology enthusiast with a love for felines. Born in the picturesque town of Siliguri, nestled at the foothills of Darjeeling, I later moved to Kolkata, the cultural capital of India. I completed my B.Sc. in Physics from Gokhale Memorial Girls' College under the University of Calcutta and am currently pursuing a B.Tech in Electronics and Communication Engineering from Rajabazar Science College. Beyond academics, I have a keen interest in painting and photography, which allow me to express my creativity. My curiosity drives me to explore new technologies, and I aspire to make meaningful contributions in the field of innovation and development. I’m also a huge fan of FC Barcelona, football, Taylor Swift, movies, and books. I can't survive a day without a good cup of tea!
             </p>
             <div className="flex flex-col lg:flex-row items-center lg:items-start gap-4 lg:gap-4 lg:px-0 w-full">
-              <a href="https://drive.google.com/drive/folders/1zFq4Ax90TUKBA6TQeMcSSaqmEhXu2_oO" className="w-full lg:w-auto">
+              <a href="https://raw.githubusercontent.com/imanishita/Resume/main/ResumeManishitaBiswas.pdf" className="w-full lg:w-auto">
                 <button data-aos="fade-up" data-aos-duration="800" className="w-full lg:w-auto sm:px-6 py-2 sm:py-3 rounded-lg bg-gradient-to-r from-[#6366f1] to-[#a855f7] text-white font-medium transition-all duration-300 hover:scale-105 flex items-center justify-center lg:justify-start gap-2 shadow-lg hover:shadow-xl animate-bounce-slow">
                   <FileText className="w-4 h-4 sm:w-5 sm:h-5" /> Download CV
                 </button>
