@@ -7,7 +7,6 @@ Welcome to my personal portfolio website! Built with modern web technologies, th
 - **Framework:** [React](https://react.dev/)
 - **Build Tool:** [Vite](https://vitejs.dev/)
 - **Styling:** [Tailwind CSS](https://tailwindcss.com/), [MUI](https://mui.com/)
-- **Animation:** [Framer Motion](https://www.framer.com/motion/), [GSAP](https://gsap.com/)
 - **Other Libraries:**
   - `lucide-react` for icons
   - `firebase` for backend integrations
