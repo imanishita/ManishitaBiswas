@@ -21,6 +21,15 @@ const socialLinks = [
     isPrimary: true,
   },
   {
+    name: "Email",
+    displayName: "Email",
+    subText: "imanishita17@gmail.com",
+    icon: ExternalLink,
+    url: "mailto:imanishita17@gmail.com",
+    color: "#ffffff",
+    gradient: "from-[#333] to-[#24292e]",
+  },
+  {
     name: "GitHub",
     displayName: "Github",
     subText: "imanishita",
@@ -65,15 +74,7 @@ const socialLinks = [
     color: "#1DA1F2",
     gradient: "from-[#1DA1F2] to-[#0D8BCE]",
   },
-  {
-    name: "Email",
-    displayName: "Email",
-    subText: "imanishita17@gmail.com",
-    icon: ExternalLink,
-    url: "mailto:imanishita17@gmail.com",
-    color: "#ffffff",
-    gradient: "from-[#333] to-[#24292e]",
-  },
+  
 ];
 
 const SocialLinks = () => {
