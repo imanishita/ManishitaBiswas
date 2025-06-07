@@ -4,8 +4,10 @@ import {
   Github,
   Instagram,
   Youtube,
-  ExternalLink
+  ExternalLink,
 } from "lucide-react";
+import { FaTwitter, FaDiscord } from "react-icons/fa";
+import { SiLeetcode } from "react-icons/si";
 
 const socialLinks = [
   {
@@ -16,7 +18,7 @@ const socialLinks = [
     url: "https://www.linkedin.com/in/imanishita",
     color: "#0A66C2",
     gradient: "from-[#0A66C2] to-[#0077B5]",
-    isPrimary: true
+    isPrimary: true,
   },
   {
     name: "GitHub",
@@ -25,7 +27,43 @@ const socialLinks = [
     icon: Github,
     url: "https://github.com/imanishita",
     color: "#ffffff",
-    gradient: "from-[#333] to-[#24292e]"
+    gradient: "from-[#333] to-[#24292e]",
+  },
+  {
+    name: "Instagram",
+    displayName: "Instagram",
+    subText: "@imanishita",
+    icon: Instagram,
+    url: "https://www.instagram.com/imanishita",
+    color: "#E1306C",
+    gradient: "from-[#E1306C] to-[#C13584]",
+  },
+  {
+    name: "LeetCode",
+    displayName: "LeetCode",
+    subText: "leetcode.com/imanishita",
+    icon: SiLeetcode,
+    url: "https://leetcode.com/imanishita",
+    color: "#FFA116",
+    gradient: "from-[#FFA116] to-[#F2B700]",
+  },
+  {
+    name: "Discord",
+    displayName: "Discord",
+    subText: "@imanishita#0000",
+    icon: FaDiscord,
+    url: "https://discord.com/users/imanishita",
+    color: "#5865F2",
+    gradient: "from-[#5865F2] to-[#404EED]",
+  },
+  {
+    name: "Twitter",
+    displayName: "Twitter",
+    subText: "@imanishita",
+    icon: FaTwitter,
+    url: "https://twitter.com/imanishita",
+    color: "#1DA1F2",
+    gradient: "from-[#1DA1F2] to-[#0D8BCE]",
   },
   {
     name: "Email",
@@ -34,13 +72,13 @@ const socialLinks = [
     icon: ExternalLink,
     url: "mailto:imanishita17@gmail.com",
     color: "#ffffff",
-    gradient: "from-[#333] to-[#24292e]"
-  }
+    gradient: "from-[#333] to-[#24292e]",
+  },
 ];
 
 const SocialLinks = () => {
-  const linkedIn = socialLinks.find(link => link.isPrimary);
-  const otherLinks = socialLinks.filter(link => !link.isPrimary);
+  const linkedIn = socialLinks.find((link) => link.isPrimary);
+  const otherLinks = socialLinks.filter((link) => !link.isPrimary);
 
   return (
     <div className="w-full bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-6 py-8 backdrop-blur-xl">
@@ -50,7 +88,6 @@ const SocialLinks = () => {
       </h3>
 
       <div className="flex flex-col gap-4">
-        {/* LinkedIn - Primary Row */}
         {linkedIn && (
           <a
             href={linkedIn.url}
@@ -64,7 +101,6 @@ const SocialLinks = () => {
               className={`absolute inset-0 opacity-0 group-hover:opacity-20 transition-opacity duration-500
                 bg-gradient-to-r ${linkedIn.gradient}`}
             />
-
             <div className="relative flex items-center gap-4">
               <div className="relative flex items-center justify-center">
                 <div
@@ -79,7 +115,6 @@ const SocialLinks = () => {
                   />
                 </div>
               </div>
-
               <div className="flex flex-col">
                 <span className="text-lg font-bold pt-[0.2rem] text-gray-200 tracking-tight leading-none group-hover:text-white transition-colors duration-300">
                   {linkedIn.displayName}
@@ -89,13 +124,11 @@ const SocialLinks = () => {
                 </span>
               </div>
             </div>
-
             <ExternalLink
               className="relative w-5 h-5 text-gray-500 group-hover:text-white
                 opacity-0 group-hover:opacity-100 transition-all duration-300
                 transform group-hover:translate-x-0 -translate-x-1"
             />
-
             <div className="absolute inset-0 opacity-0 group-hover:opacity-100 pointer-events-none overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent
                 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
@@ -103,7 +136,6 @@ const SocialLinks = () => {
           </a>
         )}
 
-        {/* Remaining Links - Rows */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {otherLinks.map((link) => (
             <a
@@ -115,9 +147,10 @@ const SocialLinks = () => {
                 bg-white/5 border border-white/10 overflow-hidden
                 hover:border-white/20 transition-all duration-500"
             >
-              <div className={`absolute inset-0 opacity-0 group-hover:opacity-20 transition-opacity duration-500
-                bg-gradient-to-r ${link.gradient}`} />
-
+              <div
+                className={`absolute inset-0 opacity-0 group-hover:opacity-20 transition-opacity duration-500
+                bg-gradient-to-r ${link.gradient}`}
+              />
               <div className="relative flex items-center justify-center">
                 <div
                   className="absolute inset-0 opacity-20 rounded-lg transition-all duration-500
@@ -131,7 +164,6 @@ const SocialLinks = () => {
                   />
                 </div>
               </div>
-
               <div className="flex flex-col min-w-0">
                 <span className="text-sm font-bold text-gray-200 group-hover:text-white transition-colors duration-300">
                   {link.displayName}
@@ -140,11 +172,11 @@ const SocialLinks = () => {
                   {link.subText}
                 </span>
               </div>
-
-              <ExternalLink className="w-4 h-4 text-gray-500 group-hover:text-white ml-auto
+              <ExternalLink
+                className="w-4 h-4 text-gray-500 group-hover:text-white ml-auto
                 opacity-0 group-hover:opacity-100 transition-all duration-300
-                transform group-hover:translate-x-0 -translate-x-2" />
-
+                transform group-hover:translate-x-0 -translate-x-2"
+              />
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 pointer-events-none overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent
                   translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
