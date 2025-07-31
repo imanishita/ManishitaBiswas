@@ -78,7 +78,7 @@ const TYPING_SPEED = 100;
 const ERASING_SPEED = 50;
 const PAUSE_DURATION = 2000;
 const WORDS = ["Technology", "&","Feline Enthusiast"];
-const TECH_STACK = ["Java", "Springboot", "React","TailwindCSS","MySQL","HTML","CSS","JavaScript","Firebase","Git","PowerBi"];
+const TECH_STACK = ["Java", "Springboot", "React","TailwindCSS","MySQL","Python","HTML","CSS","JavaScript","Firebase","Git"];
 const SOCIAL_LINKS = [
   { icon: Github, link: "https://github.com/imanishita" },
   { icon: Linkedin, link: "www.linkedin.com/in/imanishita" }
