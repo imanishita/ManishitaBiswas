@@ -1,33 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Code2, Github, Globe, User } from 'lucide-react';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
-const TypewriterEffect = ({ text }) => {
-  const [displayText, setDisplayText] = useState('');
-  
-  useEffect(() => {
-    let index = 0;
-    const timer = setInterval(() => {
-      if (index <= text.length) {
-        setDisplayText(text.slice(0, index));
-        index++;
-      } else {
-        clearInterval(timer);
-      }
-    }, 260);
-    
-    return () => clearInterval(timer);
-  }, [text]);
-
-  return (
-    <span className="inline-block">
-      {displayText}
-      <span className="animate-pulse">|</span>
-    </span>
-  );
-};
+/* ---------------- BACKGROUND ---------------- */
 
 const BackgroundEffect = () => (
   <div className="absolute inset-0 overflow-hidden">
@@ -36,115 +12,83 @@ const BackgroundEffect = () => (
   </div>
 );
 
-const IconButton = ({ Icon }) => (
-  <div className="relative group hover:scale-110 transition-transform duration-300">
-    <div className="absolute -inset-2 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-full blur opacity-30 group-hover:opacity-75 transition duration-300" />
-    <div className="relative p-2 sm:p-3 bg-black/50 backdrop-blur-sm rounded-full border border-white/10">
-      <Icon className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 text-white" />
-    </div>
+/* ---------------- STATUS LINE ---------------- */
+
+const OpportunityLine = () => (
+  <div
+    data-aos="fade-up"
+    data-aos-delay="300"
+    className="relative inline-flex items-center gap-3 px-6 py-3 rounded-full 
+               bg-white/5 backdrop-blur-xl border border-white/10"
+  >
+    <span className="relative flex h-2.5 w-2.5">
+      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-70"></span>
+      <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-indigo-400"></span>
+    </span>
+
+    <span className="text-sm sm:text-base text-gray-200 tracking-wide">
+      Full-time • Freelance • Collaborations
+    </span>
   </div>
 );
+
+/* ---------------- MAIN SCREEN ---------------- */
 
 const WelcomeScreen = ({ onLoadingComplete }) => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     AOS.init({
-      duration: 1000,
-      once: false,
-      mirror: false,
+      duration: 900,
+      once: true,
     });
 
     const timer = setTimeout(() => {
       setIsLoading(false);
-      setTimeout(() => {
-        onLoadingComplete?.();
-      }, 1000);
-    }, 4000);
-    
+      setTimeout(() => onLoadingComplete?.(), 700);
+    }, 3600);
+
     return () => clearTimeout(timer);
   }, [onLoadingComplete]);
-
-  const containerVariants = {
-    exit: {
-      opacity: 0,
-      scale: 1.1,
-      filter: "blur(10px)",
-      transition: {
-        duration: 0.8,
-        ease: "easeInOut",
-        when: "beforeChildren",
-        staggerChildren: 0.1
-      }
-    }
-  };
-
-  const childVariants = {
-    exit: {
-      y: -20,
-      opacity: 0,
-      transition: {
-        duration: 0.4,
-        ease: "easeInOut"
-      }
-    }
-  };
 
   return (
     <AnimatePresence>
       {isLoading && (
         <motion.div
-          className="fixed inset-0 bg-[#030014]"
+          className="fixed inset-0 z-50 bg-[#030014]"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          exit="exit"
-          variants={containerVariants}
+          exit={{
+            opacity: 0,
+            scale: 1.05,
+            filter: "blur(10px)",
+            transition: { duration: 0.8, ease: "easeInOut" },
+          }}
         >
           <BackgroundEffect />
-          
+
           <div className="relative min-h-screen flex items-center justify-center px-4">
-            <div className="w-full max-w-4xl mx-auto">
-              {/* Icons */}
-              <motion.div 
-                className="flex justify-center gap-3 sm:gap-4 md:gap-8 mb-6 sm:mb-8 md:mb-12"
-                variants={childVariants}
-              >
-                {[Code2, User, Github].map((Icon, index) => (
-                  <div key={index} data-aos="fade-down" data-aos-delay={index * 200}>
-                    <IconButton Icon={Icon} />
-                  </div>
-                ))}
-              </motion.div>
+            <div className="w-full max-w-4xl mx-auto text-center space-y-10">
 
-              {/* Welcome Text */}
-              <motion.div 
-                className="text-center mb-6 sm:mb-8 md:mb-12"
-                variants={childVariants}
-              >
-                <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold space-y-2 sm:space-y-4">
-                  <div className="mb-2 sm:mb-4">
-                    <span data-aos="fade-right" data-aos-delay="200" className="inline-block px-2 bg-gradient-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-transparent">
-                      Welcome
-                    </span>{' '}
-                    <span data-aos="fade-right" data-aos-delay="400" className="inline-block px-2 bg-gradient-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-transparent">
-                    স্বাগতম
-                    </span>{' '}
-                    <span data-aos="fade-right" data-aos-delay="600" className="inline-block px-2 bg-gradient-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-transparent">
-                    स्वागत है
-                    </span>
-                  </div>
-                  <div>
-                    <span data-aos="fade-up" data-aos-delay="800" className="inline-block px-2 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
-                    Bienvenue
-                    </span>{' '}
-                    <span data-aos="fade-up" data-aos-delay="1000" className="inline-block px-2 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
-                    Bienvenido
-                    </span>
-                  </div>
+              {/* WELCOME TEXT */}
+              <div data-aos="fade-up">
+                <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight">
+                  <span className="block bg-gradient-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-transparent">
+                    Welcome • স্বাগতম • स्वागत है
+                  </span>
+                  <span className="block mt-2 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+                    Bienvenue • Bienvenido
+                  </span>
                 </h1>
-              </motion.div>
 
-              
+                <p className="mt-4 text-sm sm:text-base text-gray-400 tracking-wide">
+                  Open to opportunities
+                </p>
+              </div>
+
+              {/* STATUS */}
+              <OpportunityLine />
+
             </div>
           </div>
         </motion.div>
