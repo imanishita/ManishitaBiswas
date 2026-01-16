@@ -59,7 +59,6 @@ const ContactPage = () => {
 
   return (
     <section id="Contact" className="px-[5%] lg:px-[10%] pb-28">
-
       {/* HEADER */}
       <div className="text-center mb-16">
         <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-[#6366f1] to-[#a855f7] bg-clip-text text-transparent">
@@ -72,7 +71,6 @@ const ContactPage = () => {
 
       {/* MAIN GRID */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-start">
-
         {/* LEFT — SOCIAL LINKS */}
         <div data-aos="fade-right">
           <h3 className="text-xl font-semibold text-white mb-6">
@@ -84,21 +82,25 @@ const ContactPage = () => {
               label="Email"
               value="imanishita17@gmail.com"
               icon={Mail}
+              url="mailto:imanishita17@gmail.com"
             />
             <SocialItem
               label="GitHub"
               value="github.com/imanishita"
               icon={Github}
+              url="https://github.com/imanishita"
             />
             <SocialItem
               label="LeetCode"
               value="leetcode.com/imanishita"
               icon={SiLeetcode}
+              url="https://leetcode.com/imanishita"
             />
             <SocialItem
               label="Twitter"
               value="@imanishita"
               icon={Twitter}
+              url="https://twitter.com/imanishita"
             />
           </div>
         </div>
@@ -172,13 +174,17 @@ const ContactPage = () => {
 
 /* ---------------- SMALL COMPONENTS ---------------- */
 
-const SocialItem = ({ label, value, icon: Icon }) => (
-  <div
+const SocialItem = ({ label, value, icon: Icon, url }) => (
+  <a
+    href={url}
+    target="_blank"
+    rel="noopener noreferrer"
     className="
       flex items-center gap-4
       bg-white/5 border border-white/10
       rounded-xl px-5 py-4
-      hover:bg-white/10 transition
+      hover:bg-white/10 hover:border-white/20
+      transition cursor-pointer
     "
   >
     <div className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center shrink-0">
@@ -189,7 +195,7 @@ const SocialItem = ({ label, value, icon: Icon }) => (
       <span className="text-sm text-gray-300">{label}</span>
       <span className="text-xs text-gray-400">{value}</span>
     </div>
-  </div>
+  </a>
 );
 
 const Input = ({ icon: Icon, ...props }) => (
