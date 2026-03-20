@@ -129,6 +129,8 @@ const AboutPage = () => {
               </span>
               <br />
               University of Calcutta (Institute of Radio Physics and Electronics)
+              <br />
+              Expected 2026
             </p>
           </div>
 

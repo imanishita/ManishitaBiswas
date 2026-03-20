@@ -10,6 +10,12 @@ const socialLinks = [
     url: "mailto:imanishita17@gmail.com",
   },
   {
+    label: "LinkedIn",
+    value: "linkedin.com/in/imanishita",
+    icon: Linkedin,
+    url: "https://www.linkedin.com/in/imanishita",
+  },
+  {
     label: "GitHub",
     value: "github.com/imanishita",
     icon: Github,

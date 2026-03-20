@@ -96,7 +96,7 @@ const WORDS = ["Technology", "&","Feline Enthusiast"];
 const TECH_STACK = ["Java", "Springboot","PostgreSQL","MySQL","MongoDB","Python","React","TailwindCSS","HTML","CSS","JavaScript","Docker","Firebase","Git"];
 const SOCIAL_LINKS = [
   { icon: Github, link: "https://github.com/imanishita" },
-  { icon: Linkedin, link: "www.linkedin.com/in/imanishita" }
+  { icon: Linkedin, link: "https://www.linkedin.com/in/imanishita/" }
 ];
 
 const Home = () => {

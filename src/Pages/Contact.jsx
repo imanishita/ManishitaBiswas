@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { User, Mail, MessageSquare, Send, Github, Twitter } from "lucide-react";
+import { User, Mail, MessageSquare, Send, Github, Twitter, Linkedin } from "lucide-react";
 import { SiLeetcode } from "react-icons/si";
 import Swal from "sweetalert2";
 import AOS from "aos";
@@ -83,6 +83,12 @@ const ContactPage = () => {
               value="imanishita17@gmail.com"
               icon={Mail}
               url="mailto:imanishita17@gmail.com"
+            />
+            <SocialItem
+              label="LinkedIn"
+              value="linkedin.com/in/imanishita/"
+              icon={Linkedin}
+              url="https://www.linkedin.com/in/imanishita/"
             />
             <SocialItem
               label="GitHub"
